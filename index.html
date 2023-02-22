@@ -71,8 +71,7 @@
   </head>
   <body onload="startGame()">
     <h1>Word Guessing Game</h1>
-    <p>Guess the 5-letter word. C indicates the number of correct letters in your guess and I indicates the wrong ones. Letters do not repeat in the word</p>
-    <form>
+<p>Guess the 5-letter word. C indicates the number of letters in the correct position in your guess and I indicates the ones in wrong positions. Letters do not repeat in the word</p>    <form>
       <input type="text" id="guess" name="guess" maxlength="5" title="Guess the 5-letter word" autocomplete="off">
       <input type="button" value="Guess" onclick="checkGuess()">
     </form>
