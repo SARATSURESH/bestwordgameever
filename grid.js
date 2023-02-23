@@ -66,8 +66,9 @@ function startGame(){
 //function to check the guess
 function checkGuess() {
   // get the guess from the input
-  let guess = document.getElementById("guess").value.toLowerCase();
-  let targetWord = word.toLowerCase();
+
+   let guess = document.getElementById("guess").value.toUpperCase();
+  let targetWord = word.toUpperCase();
 
   // check if the guess is correct
   if (guess === targetWord) {
