@@ -7,7 +7,7 @@
 
 function startGame(){
   //set up the game
-  fetch('https://raw.githubusercontent.com/SARATSURESH/bestwordgameever/main/finallist.txt')
+  fetch('https://raw.githubusercontent.com/SARATSURESH/bestwordgameever/main/list.txt')
   .then(response => response.text())
   .then(data => {
     debugger;
