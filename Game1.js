@@ -16,7 +16,7 @@ function startGame() {
     .then((data) => {
       words = data.split("\n");
       word = words[Math.floor(Math.random() * words.length)].trim().toUpperCase();
-      guesses = 10;
+      guesses = 8;
       output = "";
       guesslist = "";
       num1 = 0;
