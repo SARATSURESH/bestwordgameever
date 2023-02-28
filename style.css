@@ -1,134 +1,56 @@
-body {
-  font-family: Arial, sans-serif;
-}
 h1 {
-  font-size: 3rem;
-  margin-bottom: 1.5rem;
-}
-p {
-  font-size: 1.5rem;
-  line-height: 2.5rem;
-  margin-bottom: 1.5rem;
-}
-form {
-  margin-bottom: 1.5rem;
-}
-input[type="text"] {
-  width: 100%;
-  height: 4rem;
-  font-size: 2rem;
-  padding: 1rem;
-  border-radius: 0.5rem;
-  border: 2px solid #ccc;
-  box-sizing: border-box;
-  margin-bottom: 1.5rem;
-}
-input[type="button"] {
-  background-color: #e9e9e9;
-  color: #333;
-  font-size: 2rem;
-  padding: 1rem 2rem;
-  border-radius: 0.5rem;
-  border: none;
-  cursor: pointer;
-}
-input[type="button"]:hover {
-  background-color: #ddd;
-}
-#output {
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-}
-.C {
-  color: green;
-  font-weight: bold;
-}
-.I {
-  color: yellow;
-  font-weight: bold;
-}
-#guesslist {
-  font-size: 2rem;
-  line-height: 2.5rem;
-  margin-bottom: 1.5rem;
-}
-
-.alphabets {
-  display: flex;
-  flex-wrap: wrap;
-  width: 25%;
-  margin: auto;
-  margin-bottom: 1.5rem;
-  position: relative;
-}
-
-.alphabets button {
-  width: 25%;
-  padding: 0.5rem;
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-  border: 1px solid #ccc;
-  background-color: #e9e9e9;
-  color: #333;
-  border-radius: 0.5rem;
-  cursor: pointer;
-}
-
-#crossout-toggle,
-#crossout-undo,
-#hint {
-  margin-right: 10%;
-  margin-left: 10%;
-}
-
-.crossed-out {
-  text-decoration: line-through;
-  color: gray;
-  cursor: default;
-}
-
-#hint-button {
-  background-color: green;
-  color: white;
-}
-
-#hint:hover {
-  background-color: darkgreen;
-}
-
-.popup {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: white;
-  width: 400px;
-  padding: 20px;
-  border: 2px solid black;
-  border-radius: 5px;
   text-align: center;
+ }
+
+#game-board {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
-.popup input {
-  margin: 10px;
-  padding: 10px;
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  border-radius: 5px;
+.letter-box {
+  border: 2px solid gray;
+  border-radius: 3px;
+  margin: 2px;
+  font-size: 2.5rem;
+  font-weight: 700;
+  height: 3rem;
+  width: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+.filled-box {
+  border: 2px solid black;
+}
+
+.letter-row {
+  display: flex;
+}
+
+
+#keyboard-cont {
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#keyboard-cont div {
+  display: flex;
+}
+
+.second-row {
+  margin: 0.5rem 0;
+}
+
+.keyboard-button {
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 0.5rem;
+  margin: 0 2px;
   cursor: pointer;
-}
-
-.popup input:hover {
-  background-color: #3e8e41;
-}
-
-.popup input[type="text"] {
-  width: 50px;
-  height: 30px;
-}
-
-.popup p {
-  font-size: 1.5rem;
-  margin-bottom: 1.5rem;
+  text-transform: uppercase;
 }
