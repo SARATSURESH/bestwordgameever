@@ -5,6 +5,7 @@ let nextLetter = 0;
 let guesses = 8;
 let currentGuess = [];
 let output="";
+let word="";
 
   //set up the game
   fetch("https://raw.githubusercontent.com/SARATSURESH/bestwordgameever/main/wordlist.txt")
@@ -101,7 +102,7 @@ let output="";
       }
       alphabetGridHtml +=`</div> <div class="third-row">`;
       alphabetGridHtml +=`<button class="keyboard-button">Del</button>`;
-      alphabetGridHtml +=`<button class="keyboard-button" id="hint-button" hidden title="Click for a hint">Hint</button>`;
+        alphabetGridHtml +=`<button class="keyboard-button" id="hint-button" hidden title="Click for a hint">Hint</button>`;
       alphabetGridHtml +=`<button class="keyboard-button">Enter</button>`;
       alphabetGridHtml +=`</div>`;
       document.getElementById("keyboard-cont").innerHTML = alphabetGridHtml;
@@ -200,7 +201,6 @@ function deleteLetter () {
 
 //function to check the guess
 function checkGuess() {
-  debugger;
   // get the guess from the input
   let targetWord = word.toUpperCase();
   let checkvalid="";
@@ -231,13 +231,13 @@ let isValid=words.includes(checkvalid);
   // check if the guess is repeated
   if (isRepeated) {
     toastr.error(`You have already guesssed the word"${guess}"`)
-            return;
+            return
   }
 
 
   // check if the guess is correct
   if (guess === targetWord) {
-    output = `You Win! ${targetWord} is the right word`
+    alert(`You Win! ${targetWord} is the right word`)
     guesses=0
     return
   } else {
@@ -307,6 +307,7 @@ let isValid=words.includes(checkvalid);
 }
 
 function showHint() {
+  debugger;
   let guessesSoFar = guessesArr.length;
   var guessNumber = prompt(`Which guess do you want a hint for? (Enter a number between 1 and ${guessesSoFar})`);
   if (guessNumber != null) {
@@ -325,9 +326,4 @@ function showHint() {
     }
   }
   }
-
-
-
-
-
 
