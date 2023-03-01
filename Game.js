@@ -257,11 +257,11 @@ let isValid=words.includes(checkvalid);
     }
 
     for (let i = 0; i < guess.length; i++) {
+      //let usedIndexes = new Set();
       if (usedIndexes.has(i)) continue;
       let matchIndex = targetWord.indexOf(guess[i]);
-      if (matchIndex !== -1 && !usedIndexes.has(matchIndex)) {
+      if (matchIndex !== -1) {
         num2++;
-        usedIndexes.add(matchIndex);
         incorrectPositionLetters.push(guess[i]);
       }
     }
@@ -326,6 +326,3 @@ function showHint() {
     }
   }
   }
-
-
-
