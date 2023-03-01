@@ -201,6 +201,7 @@ function deleteLetter () {
 
 //function to check the guess
 function checkGuess() {
+  debugger;
   // get the guess from the input
   let targetWord = word.toUpperCase();
   let checkvalid="";
@@ -307,7 +308,6 @@ let isValid=words.includes(checkvalid);
 }
 
 function showHint() {
-  debugger;
   let guessesSoFar = guessesArr.length;
   var guessNumber = prompt(`Which guess do you want a hint for? (Enter a number between 1 and ${guessesSoFar})`);
   if (guessNumber != null) {
@@ -326,4 +326,6 @@ function showHint() {
     }
   }
   }
+
+
 
